@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="shortcut icon" href="./images/ANAB.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Image Gallery</h1>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search images...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="nature">Nature</button>
+      <button data-filter="city">City</button>
+      <button data-filter="animals">Animals</button>
+      <button data-filter="abstract">Abstract</button>
+    </div>
+  </header>
+
+  <div class="gallery">
+    <!-- Nature Images -->
+    <div class="gallery-item nature" data-category="nature" data-title="Nature 1" data-description="Beautiful landscape.">
+      <img src="./images/Nature-1.jpg" alt="Nature 1">
+      <div class="overlay">
+        <h3>Beautiful landscape.
+
+        </h3>
+        <p>Beautiful landscape.</p>
+      </div>
+    </div>
+    <div class="gallery-item nature" data-category="nature" data-title="Nature 2" data-description="Scenic view.">
+      <img src="./images/Nature-2.jpg" alt="Nature 2">
+      <div class="overlay">
+        <h3>Nature 2</h3>
+        <p>Scenic view.</p>
+      </div>
+    </div>
+    <div class="gallery-item nature" data-category="nature" data-title="Nature 3" data-description="Mountain view.">
+      <img src="./images/Nature-3.jpg" alt="Nature 3">
+      <div class="overlay">
+        <h3>Nature 3</h3>
+        <p>Mountain view.</p>
+      </div>
+    </div>
+    <div class="gallery-item nature" data-category="nature" data-title="Nature 4" data-description="Forest trail.">
+      <img src="./images/Nature-4.jpg" alt="Nature 4">
+      <div class="overlay">
+        <h3>Nature 4</h3>
+        <p>Forest trail.</p>
+      </div>
+    </div>
+    <div class="gallery-item nature" data-category="nature" data-title="Nature 5" data-description="Sunset over the lake.">
+      <img src="./images/Nature-5.jpg" alt="Nature 5">
+      <div class="overlay">
+        <h3>Nature 5</h3>
+        <p>Sunset over the lake.</p>
+      </div>
+    </div>
+
+    <!-- City Images -->
+    <div class="gallery-item city" data-category="city" data-title="City 1" data-description="Urban skyline.">
+      <img src="./images/Nature-1.jpg" alt="City 1">
+      <div class="overlay">
+        <h3>City 1</h3>
+        <p>Urban skyline.</p>
+      </div>
+    </div>
+    <div class="gallery-item city" data-category="city" data-title="City 2" data-description="City lights.">
+      <img src="./images/Nature-2.jpg" alt="City 2">
+      <div class="overlay">
+        <h3>City 2</h3>
+        <p>City lights.</p>
+      </div>
+    </div>
+    <div class="gallery-item city" data-category="city" data-title="City 3" data-description="Night city.">
+      <img src="./images/Nature-3.jpg" alt="City 3">
+      <div class="overlay">
+        <h3>City 3</h3>
+        <p>Night city.</p>
+      </div>
+    </div>
+    <div class="gallery-item city" data-category="city" data-title="City 4" data-description="Modern architecture.">
+      <img src="./images/Nature-4.jpg" alt="City 4">
+      <div class="overlay">
+        <h3>City 4</h3>
+        <p>Modern architecture.</p>
+      </div>
+    </div>
+    <div class="gallery-item city" data-category="city" data-title="City 5" data-description="Busy streets.">
+      <img src="./images/Nature-5.jpg" alt="City 5">
+      <div class="overlay">
+        <h3>City 5</h3>
+        <p>Busy streets.</p>
+      </div>
+    </div>
+
+    <!-- Animals Images -->
+    <div class="gallery-item animals" data-category="animals" data-title="Animals 1" data-description="Cute wildlife.">
+      <img src="./images/animal-2.jpg" alt="Animals 1">
+      <div class="overlay">
+        <h3>Animals 1</h3>
+        <p>Cute wildlife.</p>
+      </div>
+    </div>
+    <div class="gallery-item animals" data-category="animals" data-title="Animals 2" data-description="Wildlife in action.">
+      <img src="./images/animal-1.jpg" alt="Animals 2">
+      <div class="overlay">
+        <h3>Animals 2</h3>
+        <p>Wildlife in action.</p>
+      </div>
+    </div>
+    <div class="gallery-item animals" data-category="animals" data-title="Animals 3" data-description="Elephant in the wild.">
+      <img src="./images/animal-3.jpg" alt="Animals 3">
+      <div class="overlay">
+        <h3>Animals 3</h3>
+        <p>Elephant in the wild.</p>
+      </div>
+    </div>
+    <div class="gallery-item animals" data-category="animals" data-title="Animals 4" data-description="Lion in the savanna.">
+      <img src="./images/animal-4.jpg" alt="Animals 4">
+      <div class="overlay">
+        <h3>Animals 4</h3>
+        <p>Lion in the savanna.</p>
+      </div>
+    </div>
+    <div class="gallery-item animals" data-category="animals" data-title="Animals 5" data-description="Penguins on ice.">
+      <img src="./images/animal-5.jpg" alt="Animals 5">
+      <div class="overlay">
+        <h3>Animals 5</h3>
+        <p>Penguins on ice.</p>
+      </div>
+    </div>
+
+    <!-- Abstract Images -->
+    <div class="gallery-item abstract" data-category="abstract" data-title="Abstract 1" data-description="Colorful patterns.">
+      <img src="./images/abstract-1.jpg" alt="Abstract 1">
+      <div class="overlay">
+        <h3>Abstract 1</h3>
+        <p>Colorful patterns.</p>
+      </div>
+    </div>
+    <div class="gallery-item abstract" data-category="abstract" data-title="Abstract 2" data-description="Geometric shapes.">
+      <img src="./images/abstract-2.jpg" alt="Abstract 2">
+      <div class="overlay">
+        <h3>Abstract 2</h3>
+        <p>Geometric shapes.</p>
+      </div>
+    </div>
+    <div class="gallery-item abstract" data-category="abstract" data-title="Abstract 3" data-description="Fluid art.">
+      <img src="./images/abstract-3.jpg" alt="Abstract 3">
+      <div class="overlay">
+        <h3>Abstract 3</h3>
+        <p>Fluid art.</p>
+      </div>
+    </div>
+    <div class="gallery-item abstract" data-category="abstract" data-title="Abstract 4" data-description="Minimalist design.">
+      <img src="./images/abstract-4.jpg" alt="Abstract 4">
+      <div class="overlay">
+        <h3>Abstract 4</h3>
+        <p>Minimalist design.</p>
+      </div>
+    </div>
+    <div class="gallery-item abstract" data-category="abstract" data-title="Abstract 5" data-description="Vibrant colors.">
+      <img src="./images/abstract-5.jpg" alt="Abstract 5">
+      <div class="overlay">
+        <h3>Abstract 5</h3>
+        <p>Vibrant colors.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="caption"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/anabyounus" title="Anab Younus GitHub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/anab-younus" title="Anab Younus LinkedIn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Image Gallery. All rights reserved by Muhammad Anab Younus.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
