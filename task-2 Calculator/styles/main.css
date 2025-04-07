@@ -1,0 +1,214 @@
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #fff;
+    --input-bg: #333;
+    --input-border: #444;
+    --input-focus: #6a11cb;
+  }
+  
+  [data-theme="light"] {
+    --bg-color: #f4f4f4;
+    --text-color: #000;
+    --input-bg: #fff;
+    --input-border: #ddd;
+    --input-focus: #2575fc;
+  }
+  
+  .screen {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .screen.active {
+    display: block;
+  }
+  
+  input[type="text"], input[type="number"], input[type="date"], select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid var(--input-border);
+    border-radius: 10px;
+    background: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    text-align: left;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, select:focus {
+    border-color: var(--input-focus);
+    box-shadow: 0 0 8px var(--input-focus);
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: #999;
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+  }
+  
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592c.859 0 1.319 1.013.753 1.658l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px;
+  }
+  
+  button {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    padding: 15px 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin: 5px;
+    font-size: 1rem;
+  }
+
+
+  /* ==================================================================== */
+  /* Scientific Calculator Buttons */
+#scientific-calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+  }
+  
+  #scientific-calculator .buttons button {
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  #scientific-calculator .buttons button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+  }
+  
+  #scientific-calculator .buttons button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Specific Button Styling */
+  #scientific-calculator .buttons button[data-value="AC"] {
+    background: #ff4757; /* Red for AC */
+  }
+  
+  #scientific-calculator .buttons button[data-value="="] {
+    background: #2ed573; /* Green for Equals */
+  }
+  
+  #scientific-calculator .buttons button[data-value="π"],
+  #scientific-calculator .buttons button[data-value="e"] {
+    background: #ffa502; /* Orange for Constants */
+  }
+  
+  #scientific-calculator .buttons button[data-value="sin"],
+  #scientific-calculator .buttons button[data-value="cos"],
+  #scientific-calculator .buttons button[data-value="tan"],
+  #scientific-calculator .buttons button[data-value="log"],
+  #scientific-calculator .buttons button[data-value="ln"],
+  #scientific-calculator .buttons button[data-value="√"],
+  #scientific-calculator .buttons button[data-value="x²"],
+  #scientific-calculator .buttons button[data-value="x!"] {
+    background: #3742fa; /* Blue for Advanced Functions */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #scientific-calculator .buttons {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns for smaller screens */
+    }
+  
+    #scientific-calculator .buttons button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+    /* ========================  CSS Calculator  ========================== */
+  
+  button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+  }
+  
+  button:disabled {
+    background: #666;
+    cursor: not-allowed;
+  }
+  
+  #simple-calculator .buttons, #scientific-calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  #scientific-calculator .buttons {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  #simple-calculator .buttons button, #scientific-calculator .buttons button {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+  
+  #simple-calculator .buttons button[data-value="C"], #scientific-calculator .buttons button[data-value="C"] {
+    grid-column: span 2;
+    background: #ff4757;
+  }
+  
+  #simple-calculator .buttons button[data-value="="], #scientific-calculator .buttons button[data-value="="] {
+    grid-column: span 2;
+    background: #2ed573;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    margin-top: auto;
+  }
+  
+  .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    #simple-calculator .buttons, #scientific-calculator .buttons {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    #simple-calculator .buttons button, #scientific-calculator .buttons button {
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
